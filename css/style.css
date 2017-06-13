@@ -1,0 +1,245 @@
+/* Base Styles ------------*/
+* {
+   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #e9ecf1;
+}
+
+header {
+  background-color: #486a8d;
+}
+
+h1 {
+  margin: 0 auto;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 2.07em;
+  color: white;
+}
+
+/* Styles ------------*/
+/*Intro-text----*/
+
+h2 {
+  font-size: 1.6em;
+}
+
+p {
+  font-size: 1.3em;
+  padding-left: 0;
+  color: grey;
+  margin-bottom: 0;
+}
+
+/*Form ----*/
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+}
+
+/* Input ----*/
+/* Styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  border: solid 1px grey;
+  background-color: #e9f0f1;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid teal;
+  padding-left: 10px;
+  background-color: #d1d8d8;
+  color: teal;
+  font-size: 20px;
+  transition: background-color 1s ease;
+}
+
+select[option] {
+  padding-left: 10px;
+}
+
+/* Contact */
+
+input[name="user_zipcode"] {
+    width: 50%;
+}
+
+/* Newsletter */
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+display: inline-block;
+margin-bottom: 15px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label span {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin: -2px 10px 0 0;
+  vertical-align: middle;
+  background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+
+  background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
+}
+
+input[type="radio"] + label span {
+  display: inline-block;
+  width:19px;
+  height:19px;
+  margin:-2px 10px 0 0;
+  vertical-align:middle;
+  background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -38px top no-repeat;
+  cursor:pointer;
+}
+
+input[type="radio"]:checked + label span {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -57px top no-repeat;
+
+}
+
+textarea {
+  height: 100px;
+}
+
+/* Submit Button */
+
+button[type="submit"] {
+  width: 100%;
+  height: 60px;
+  background: #129793;
+  border: solid 1px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Footer ----*/
+
+footer {
+  text-align: center;
+  padding-bottom: 150px;
+  width: 100%;
+}
+
+
+/* Placeholder ---*/
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  text-align: right;
+  padding-right: 10px;
+  font-style: italic;
+  font-size: 1.15em;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  text-align: right;
+  padding-right: 10px;
+  font-style: italic;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  text-align: right;
+  padding-right: 10px;
+  font-style: italic;
+}
+:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+  padding-right: 10px;
+  font-style: italic;
+}
+
+/* Classes ------------*/
+/* Container ----*/
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+/*Intro-text----*/
+
+.intro {
+  text-align: center;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #486a8d;
+}
+
+.intro::after {
+  content: "";
+  display: block;
+  padding-bottom: 20px;
+  border-bottom: 4px solid #486a8d;
+}
+
+/* Contact ----*/
+
+.contact {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #486a8d;
+}
+
+/* Media Queries ----------*/
+
+@media (min-width: 768px) {
+   fieldset:first-of-type label {
+      display: block;
+      width: 30%;
+      float: left;
+      clear: both;
+      margin: 0px 0 30px;
+      padding: 15px 0;
+   }
+   fieldset:first-of-type input,
+   fieldset:first-of-type select{
+      width: 70%;
+      float: right;
+   }
+   fieldset:first-of-type input[id="zip"] {
+      max-width: 25%;
+      float: left;
+   }
+
+   input[type="text"],
+   input[type="email"],
+   input[type="tel"],
+   select {
+     height: 40px;
+     margin-top: 6px;
+     margin-bottom:36px;
+   }
+
+}
